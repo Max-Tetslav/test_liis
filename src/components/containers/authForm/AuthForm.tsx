@@ -43,9 +43,13 @@ const AuthForm: React.FC = () => {
       {({ isSubmitting }) => (
         <Form className={cl.form}>
           <h1 className={cl.title}>Simple Hotel Check</h1>
-          {/* Сделал type=text потому что не смог избавиться от всплывающей подсказки дефолтной валидации*/}
-          <AuthInput label="Логин" name={EAuthInputTypes.EMAIL} type="text" /> 
-          <AuthInput label="Пароль" name={EAuthInputTypes.PASSWORD} type={EAuthInputTypes.PASSWORD} />
+          {/* Сделал type=text потому что не смог избавиться от всплывающей подсказки дефолтной валидации */}
+          <AuthInput label="Логин" name={EAuthInputTypes.EMAIL} type="text" />
+          <AuthInput
+            label="Пароль"
+            name={EAuthInputTypes.PASSWORD}
+            type={EAuthInputTypes.PASSWORD}
+          />
           <Button
             className={cl.button}
             htmlType="submit"

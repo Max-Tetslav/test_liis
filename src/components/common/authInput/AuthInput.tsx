@@ -1,8 +1,8 @@
 import React from 'react';
 import { ErrorMessage, Field, useField } from 'formik';
 import classNames from 'classnames';
-import cl from './AuthInput.module.scss';
 import { EAuthInputTypes } from '@models/auth';
+import cl from './AuthInput.module.scss';
 
 interface IAuthInput {
   label: string;
@@ -25,7 +25,9 @@ const AuthInput: React.FC<IAuthInput> = ({ label, ...props }) => {
         {...props}
         className={cl.input}
         autoComplete={
-          props.type === EAuthInputTypes.PASSWORD ? 'current-password' : 'username'
+          props.type === EAuthInputTypes.PASSWORD
+            ? 'current-password'
+            : 'username'
         }
       />
       <ErrorMessage name={field.name}>
