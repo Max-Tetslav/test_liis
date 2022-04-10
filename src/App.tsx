@@ -5,6 +5,8 @@ import { store } from '@store/index';
 
 import AuthPage from '@pages/authPage/AuthPage';
 import HotelsPage from '@pages/hotelsPage/HotelsPage';
+import NotFoundPage from '@pages/notFoundPage/NotFoundPage';
+import RequireAuth from '@components/common/requireAuth/RequireAuth';
 
 const App: React.FC = () => {
   return (
@@ -12,7 +14,15 @@ const App: React.FC = () => {
       <Provider store={store}>
         <Routes>
           <Route index element={<AuthPage />} />
-          <Route path="hotels" element={<HotelsPage />} />
+          <Route
+            path="/hotels"
+            element={
+              <RequireAuth>
+                <HotelsPage />
+              </RequireAuth>
+            }
+          />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Provider>
     </BrowserRouter>

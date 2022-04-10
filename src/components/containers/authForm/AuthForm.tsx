@@ -5,13 +5,16 @@ import * as Yup from 'yup';
 import { Button } from 'antd';
 import AuthInput from '@components/common/authInput/AuthInput';
 import { EAuthInputTypes, IAuthData } from '@models/auth';
+import { useAppDispatch } from '@store/index';
+import { login } from '@store/redusers/auth';
 import cl from './AuthForm.module.scss';
 
 const AuthForm: React.FC = () => {
   const navigate = useNavigate();
+  const dispath = useAppDispatch();
 
   const submitSuccess = useCallback((values: IAuthData) => {
-    localStorage.setItem('userData', JSON.stringify(values) || '');
+    dispath(login({ ...values }));
     navigate('hotels');
   }, []);
 
@@ -28,7 +31,7 @@ const AuthForm: React.FC = () => {
         password: Yup.string()
           .required('Обязательное поле!')
           .matches(/[a-z0-9]{8,}/gi, {
-            message: 'Неверный пароль',
+            message: 'Минимум 8 символов без кириллицы',
           }),
       })}
       validateOnChange={false}
