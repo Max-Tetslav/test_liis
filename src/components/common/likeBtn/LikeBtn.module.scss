@@ -1,0 +1,43 @@
+.active {
+  animation: like 0.3s linear;
+
+  svg path {
+    stroke: #e55858;
+    fill: #e55858;
+  }
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: transparent;
+  width: 32px;
+  height: 32px;
+  overflow: visible;
+  cursor: pointer;
+
+  svg path {
+    transition: all 0.3s ease;
+  }
+
+  &:hover {
+    svg path {
+      stroke: #e55858;
+      fill: #e55858;
+    }
+  }
+}
+
+@keyframes like {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
