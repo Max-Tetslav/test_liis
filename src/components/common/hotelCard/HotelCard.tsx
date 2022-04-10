@@ -47,7 +47,7 @@ const HotelCard: React.FC<IHotelCardProps> = ({ hotel }) => {
       isFavourite === EFavouriteStatuses.NO &&
       currentData.favourites.find((item) => item.hotelId === hotel.hotelId)
     ) {
-    // Удаляет из избранного, если в избранном уже есть этот отель
+      // Удаляет из избранного, если в избранном уже есть этот отель
       dispatch(removeFavourite(hotel.hotelId));
     }
   }, [isFavourite]);
@@ -59,7 +59,7 @@ const HotelCard: React.FC<IHotelCardProps> = ({ hotel }) => {
         <p className={cl.title}>{hotel.hotelName}</p>
         <p
           className={cl.period}
-        >{`${formatedDate} - ${currentData.days} сутки`}</p>
+        >{`${formatedDate} - ${currentData.days} день`}</p>
         <p className={cl.price}>
           <span className={cl.static}>Price: </span>
           <span>{`${formatPrice(hotel.priceAvg)} ₽`}</span>

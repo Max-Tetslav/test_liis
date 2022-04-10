@@ -26,7 +26,7 @@ const FavouriteCard: React.FC<IFavoutiteCardProps> = ({ hotel }) => {
   return (
     <div className={cl.container}>
       <p className={cl.title}>{hotel.hotelName}</p>
-      <p className={cl.period}>{`${hotel.date} - ${hotel.days} ночь`}</p>
+      <p className={cl.period}>{`${hotel.date} - ${hotel.days} день`}</p>
       <p className={cl.price}>
         <span className={cl.static}>Price:</span>
         <span>{`${formatPrice(hotel.priceAvg)} ₽`}</span>

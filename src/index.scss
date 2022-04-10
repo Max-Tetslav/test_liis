@@ -50,3 +50,15 @@ select:-webkit-autofill:focus {
   box-shadow: 0 0 0 1000px #eee inset;
   transition: background-color 5000s ease-in-out 0s;
 }
+
+/* stylelint-disable */
+
+.ant-breadcrumb-separator {
+  margin: 0;
+}
+
+.ant-rate-star-first,
+.ant-rate-star-second {
+  color: rgba(108 104 69 / 60%);
+}
+  /* stylelint-enable */

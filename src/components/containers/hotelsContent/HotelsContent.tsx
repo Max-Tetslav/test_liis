@@ -40,7 +40,7 @@ const HotelsContent: React.FC = () => {
         <p className={cl.favouritesText}>
           {'Добавлено в избранное: '}
           <span className={cl.counter}>{currentData.favourites.length}</span>
-          {'отеля '}
+          {' отелей'}
         </p>
         <HotelsList />
       </div>
