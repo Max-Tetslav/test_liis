@@ -2,6 +2,7 @@
   "name": "test_liis",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://max-tetslav.github.io/test_liis/",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@redux-saga/core": "^1.1.3",

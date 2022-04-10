@@ -10,7 +10,7 @@ import RequireAuth from '@components/common/requireAuth/RequireAuth';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/test_liis">
       <Provider store={store}>
         <Routes>
           <Route index element={<AuthPage />} />
