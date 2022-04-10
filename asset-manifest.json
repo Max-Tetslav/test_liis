@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/test_liis/static/css/main.60f73e83.css",
+    "main.js": "/test_liis/static/js/main.64c4c936.js",
+    "static/media/background.png": "/test_liis/static/media/background.36a2bd2ca89776d5ed04.png",
+    "static/media/img4.png": "/test_liis/static/media/img4.84bbb6e968b9c885caad.png",
+    "static/media/img1.png": "/test_liis/static/media/img1.4028536ec5c18f1cef8f.png",
+    "static/media/img3.png": "/test_liis/static/media/img3.04a18d729c43469b47e6.png",
+    "static/media/img2.png": "/test_liis/static/media/img2.b8a541792cab0cbc2838.png",
+    "static/media/hotel.svg": "/test_liis/static/media/hotel.1b6304359727800f31b75e1a15c06bd1.svg",
+    "static/media/logout.svg": "/test_liis/static/media/logout.f4fbe5f54b990a3eb2984fc87f5c48e2.svg",
+    "index.html": "/test_liis/index.html",
+    "static/media/separator.svg": "/test_liis/static/media/separator.ecfc16f7a5f0685dc81942c312c3f763.svg",
+    "main.60f73e83.css.map": "/test_liis/static/css/main.60f73e83.css.map",
+    "main.64c4c936.js.map": "/test_liis/static/js/main.64c4c936.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60f73e83.css",
+    "static/js/main.64c4c936.js"
+  ]
+}
