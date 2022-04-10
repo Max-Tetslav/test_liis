@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const getHotels = (city: string, startDate: string, endDate: string) => {
   return axios.get<{ data: IHotel[] }>(
-    `http://engine.hotellook.com/api/v2/cache.json?location=${city}&currency=rub&checkIn=${startDate}&checkOut=${endDate}&limit=10`,
+    `https://engine.hotellook.com/api/v2/cache.json?location=${city}&currency=rub&checkIn=${startDate}&checkOut=${endDate}&limit=10`,
   );
 };
 
