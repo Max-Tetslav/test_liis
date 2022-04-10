@@ -20,7 +20,7 @@ const FavouriteList: React.FC<IFavouriteListProps> = ({
     setSortedList(favourites);
   }, [favourites]);
 
-  const sort = useCallback(
+  const sortByStars = useCallback(
     (direction: ESortDirections) => {
       const sortedArray = [...favourites];
 
@@ -40,6 +40,26 @@ const FavouriteList: React.FC<IFavouriteListProps> = ({
     [favourites],
   );
 
+  const sortByPrice = useCallback(
+    (direction: ESortDirections) => {
+      const sortedArray = [...favourites];
+
+      switch (direction) {
+        case ESortDirections.DOWN: {
+          setSortedList(sortedArray.sort((a, b) => a.priceAvg - b.priceAvg));
+          break;
+        }
+        case ESortDirections.UP: {
+          setSortedList(sortedArray.sort((a, b) => b.priceAvg - a.priceAvg));
+          break;
+        }
+
+        // no default
+      }
+    },
+    [favourites],
+  );
+
   // Сортировка
   useEffect(() => {
     if (favourites.length > 1) {
@@ -47,19 +67,19 @@ const FavouriteList: React.FC<IFavouriteListProps> = ({
         case ESortTypes.RATE: // По рейтингу
           if (sortDirection === ESortDirections.DOWN) {
             // От меньшего к большему
-            sort(ESortDirections.DOWN);
+            sortByStars(ESortDirections.DOWN);
           } else {
             // От большего к меньшему
-            sort(ESortDirections.UP);
+            sortByStars(ESortDirections.UP);
           }
           break;
         case ESortTypes.PRICE: // По цене
           if (sortDirection === ESortDirections.DOWN) {
             // От меньшего к большему
-            sort(ESortDirections.DOWN);
+            sortByPrice(ESortDirections.DOWN);
           } else {
             // От большего к меньшему
-            sort(ESortDirections.UP);
+            sortByPrice(ESortDirections.UP);
           }
           break;
 
