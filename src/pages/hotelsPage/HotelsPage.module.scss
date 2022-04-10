@@ -1,5 +1,14 @@
 .container {
-  width: 100vw;
-  height: 100vh;
-  background-color: aqua;
+  width: auto;
+  height: auto;
+  padding-bottom: 28px;
+  background-color: #e5e5e5;
+}
+
+.contentWrapper {
+  max-width: 1048px;
+  max-height: 902px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }

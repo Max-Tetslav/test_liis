@@ -1,0 +1,37 @@
+.button {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  display: flex;
+  justify-content: space-between;
+  gap: 0 12px;
+  align-items: center;
+  text-align: right;
+  letter-spacing: -0.408px;
+  color: #41522e;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+
+  img {
+    transition: all 0.3s ease;
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    transform: scale(1.05);
+    color: #41522e;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    img {
+      transform: translateX(10%);
+    }
+  }
+}

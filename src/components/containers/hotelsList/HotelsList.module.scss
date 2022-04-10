@@ -1,0 +1,16 @@
+.hotelsList {
+  height: 529px;
+  width: 600px;
+  overflow-x: auto;
+}
+
+.loading {
+  position: relative;
+  top: calc(85% / 2);
+  text-align: center;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 36px;
+  color: #424242;
+}

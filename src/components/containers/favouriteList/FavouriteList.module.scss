@@ -1,0 +1,25 @@
+.favouritesContainer {
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  scrollbar-width: 0;
+
+  &::-webkit-scrollbar-thumb {
+    display: none;
+  }
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  .empty {
+    position: relative;
+    top: calc(85% / 2);
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #424242;
+  }
+}

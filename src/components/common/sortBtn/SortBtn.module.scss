@@ -1,0 +1,83 @@
+.button {
+  display: flex;
+  align-items: center;
+  gap: 0 9px;
+  padding: 4px 8px;
+  height: 28px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.408px;
+  color: #99a0a3;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .sortContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .sortIcon {
+      .path {
+        fill-opacity: 0.3;
+        transition: fill-opacity 0.3s ease;
+      }
+    }
+
+    .upSort {
+      .path {
+        fill-opacity: 1;
+      }
+    }
+
+    .downSort {
+      .path {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  &:disabled {
+    border: 1px solid #e5e5e5;
+    color: #99a0a3;
+
+    .sortIcon {
+      .path {
+        fill-opacity: 0.3;
+      }
+    }
+  }
+
+  &:hover {
+    border: 1px solid #41522e;
+    color: #41522e;
+
+    .sortIcon {
+      .path {
+        fill-opacity: 1;
+      }
+    }
+
+    &:disabled {
+      border: 1px solid #e5e5e5;
+      color: #99a0a3;
+      cursor: not-allowed;
+
+      .sortIcon {
+        .path {
+          fill-opacity: 0.3;
+        }
+      }
+    }
+  }
+}
+
+.buttonActive {
+  border: 1px solid #41522e;
+  color: #41522e;
+}
