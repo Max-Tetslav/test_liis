@@ -13,3 +13,4 @@ Stack:
 - Ant-Design (UI)
 - Formik/Yup (Валидация)
 - Axios (Запросы)
+- ESLint/StyleLint
